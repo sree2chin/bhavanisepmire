@@ -18,10 +18,8 @@
 		<r:layoutResources />
 	</head>
 	<body>
-		
 		<g:layoutBody/>
 		<div class="footer" role="contentinfo"></div>
-		
 		<g:javascript library="application"/>
 		<r:layoutResources />
 	</body>
