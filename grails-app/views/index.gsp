@@ -40,6 +40,7 @@
 			    background: #293D4D;
 			    box-shadow: 1px 1px 2px -1px #0099cc;
 			    color: white;
+			    padding: 0;
 			}
 
 			.rightDataContainer {
@@ -48,7 +49,8 @@
 			}
 
 			.myImageContainer {
-				margin-top: 15px !important;
+				width: 100%;
+				/*margin-top: 15px !important;*/
 			}
 			.sampleContainer {
 				border: solid 1px #0099cc;
@@ -114,7 +116,7 @@
 			    flex-direction: column;
 			    width: 100%;
 			    height: 100%;
-			    margin-bottom: 15px;
+			    /*margin-bottom: 15px;*/
 			    /* background-color: lightgrey; */
 			}
 
@@ -124,7 +126,8 @@
 			    margin-top: 10px;
 			    text-align: center;
 			    padding-right: 0px;
-			    background: #0099A0;
+			    /* background: #0099A0; */
+			    border-bottom: solid 1px black;
 			}
 
 			.nav-links-flex-item a {
@@ -132,7 +135,7 @@
 			    font-size: 14px;
 			    text-decoration: none;
 			    font-family: sans-serif;
-			    line-height: 28px;
+			    line-height: 20px;
 			}
 
 			.nav-links-flex-item a:hover {
@@ -173,7 +176,7 @@
 				     width="304" 
 				     height="236"
 				     >
-				<h3> Srikanth Kumar </h3>
+				<!-- <h3> Srikanth Kumar </h3> -->
 
 				<div class="nav-links-flex-container">
 				  <div class="nav-links-flex-item">
