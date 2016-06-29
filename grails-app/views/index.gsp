@@ -219,7 +219,7 @@
 
 			.emailTemplateContainer {
 				width: 100%;
-			    min-height: 300px;
+			    height: 100%;
 			    background: #f5f5f5;
 			    /* border-radius: 30px; */
 			    margin: 10px 0 10px 0;
@@ -246,6 +246,37 @@
 			.emailButtonsContainer .primaryButton {
 				height: 40px;
 			}
+
+			.homePageContent {
+				padding-top: 20px;
+				background: ;
+				min-height: 200px;
+				background: #0099cc; /* For browsers that do not support gradients */
+			    background: -webkit-linear-gradient(left top, #0099cc, #f5f5f5, ); /* For Safari 5.1 to 6.0 */
+			    background: -o-linear-gradient(bottom right, #0099cc, #f5f5f5); /* For Opera 11.1 to 12.0 */
+			    background: -moz-linear-gradient(bottom right, #0099cc, #f5f5f5); /* For Firefox 3.6 to 15 */
+			    background: linear-gradient(to bottom right, #0099cc, #f5f5f5); /* Standard syntax (must be last) */
+			}
+
+			.homePageContent h2 {
+			    text-align: center;
+			    font-size: 29px;
+			    color: #e6ffff;
+			}
+			.homePageContent h3 {
+			    text-align: center;
+			    font-size: 17px;
+			    color: #eee;
+			    font-style: italic;
+			}
+
+			.homePageContentHaves {
+				padding-top: 18px;
+				text-align: center;
+			    color: #29888E;
+			    font-size: 17px;
+			}
+
 			/*Generic css*/
 			.paddingZero {
 				padding: 0;
@@ -333,7 +364,7 @@
 		</div>
 
 		<div class = "row mainOuterContainer">
-			<div class = "col-md-3 leftNavContainer">
+			<div class = "col-md-3 col-sm-3 leftNavContainer">
 				
 				<img src = "//i63.tinypic.com/2lw94j7.jpg" 
 				     class="img-responsive myImageContainer" 
@@ -363,20 +394,59 @@
 				</div>
 
 			</div>
-			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerHome">
-				<h2 class = "commonHeader">Hi, I'm Srikanth! <small class = "headingFooter">Full Stack Developer</small></h2>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerHome">
+				<h3 class = "commonHeader">Who am I</h3>
+				
+				<div class = "homePageContent">
+					<h2> Srikanth Kumar </h2>
+					<h3> FULL STACK DEVELOPER </h3>
+					<div class = "row homePageContentHaves">
+						<div class = "col-md-4">
+							Passionate
+						</div>
+						<div class = "col-md-4">
+							Diligent
+						</div>
+						<div class = "col-md-4">
+							Creative
+						</div>
+					</div>
+				</div>
+				<h3 class = "commonHeader">Hobbies</h3>
+				<div class = "row marginTop textAlignCenter">
+					<div class = "col-md-3 paddingZero">
+						<span class="glyphicon glyphicon-pencil commonGlyphicon">
+						</span>
+						<p>
+							Sketching
+						</p>
+					</div>
+					<div class = "col-md-3 paddingZero">
+						<span class="glyphicon glyphicon-music commonGlyphicon">
+						</span>
+						<p>
+							Music
+						</p>
+					</div>
+					<div class = "col-md-3 paddingZero">
+						<span class="glyphicon glyphicon-book commonGlyphicon">
+						</span>
+						<p>
+							Reading
+						</p>
+					</div>
+					<div class = "col-md-3 paddingZero">
+						<span class="glyphicon glyphicon-indent-left commonGlyphicon">
+						</span>
+						<p>
+							Coding
+						</p>
+					</div>
+				</div>
 
 			</div>
 
-			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerResume">
+			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerResume">
 				<h2 class = "commonHeader">Resume</h2>
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -384,7 +454,7 @@
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 			</div>
 
-			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerPortfolio">
+			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerPortfolio">
 				<h2 class = "commonHeader">Portfolio</h2>
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
@@ -392,8 +462,8 @@
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 			</div>
 
-			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerContact">
-				<h2 class = "commonHeader">Contact</h2>
+			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerContact">
+				<h3 class = "commonHeader">Get in touch</h3>
 
 				<div class = "row marginTop textAlignCenter">
 					<div class = "col-md-4 paddingZero">
@@ -420,10 +490,12 @@
 					</div>
 				</div>
 
+				<h3 class = "commonHeader">Map location</h3>
+
 				<div id = "googleMap" style = "width:100%;height:380px;"></div>
 
+				<h3 class = "commonHeader">Send me an email</h3>
 				<div class = "emailTemplateContainer">
-					<h3> Send a message </h3>
 					<textarea rows="4" cols="50" placeholder="Your message" class = "form-control zeroBorderRadius"></textarea>
 					<div class = "row emailButtonsContainer">
 						<div class = "col-md-4 emailButtonContent">
