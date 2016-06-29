@@ -16,7 +16,9 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-
+		<!-- To include google maps -->
+		<script src="http://maps.googleapis.com/maps/api/js">
+		</script>
 		</style>
 
 		<style>
@@ -25,11 +27,11 @@
 				background: #efefef;
 			}
 			.row {
-				margin: 0px !important;
+				margin: 0px;
 			}
 			.mainOuterContainer {
 				display: none;
-				padding: 30px;
+				/*padding: 30px;*/
 			}
 			h3 {
 				color: #eee;
@@ -39,16 +41,21 @@
 			    min-height: 100%;
 			    margin-bottom: 15px;
 			    /*background: #293d3d;*/
-			    background: #293D4D;
-			    box-shadow: 1px 1px 2px -1px #0099cc;
-			    color: white;
+			    /*background: #293D4D;*/
+			    background: white;
+			    /*box-shadow: 1px 1px 2px -1px #0099cc;*/
+			    /*color: white;*/
+			    min-height: 100vh;
+			    border-right: solid 1px #eee;
 			    padding: 0;
+			    z-index: 100;
 			}
 
 			.rightDataContainer {
 				background: white;
-				margin-left: 15px;
+				margin: 15px;
 				display: none;
+				padding-bottom: 15px;
 			}
 
 			.myImageContainer {
@@ -125,17 +132,35 @@
 
 			.nav-links-flex-item {
 		        width: inherit;
-			    height: 30px;
-			    margin-top: 10px;
+			    height: 40px;
+			    /* margin-top: 10px; */
 			    text-align: center;
 			    padding-right: 0px;
 			    /* background: #0099A0; */
-			    border-bottom: solid 1px black;
-			    cursor:pointer;
+			    border-bottom: solid 1px #eee;
+			    cursor: pointer;
+			    padding-top: 10px;
+			    padding-bottom: 10px;
+			    -webkit-transition: all 0.3s ease-in-out;
+			    -moz-transition: all 0.3s ease-in-out;
+			    transition: all 0.3s ease-in-out;
 			}
+			/*.nav-links-flex-item:before {
+			    content: '';
+			    position: absolute;
+			    top: 0px;
+			    width: 0%;
+			    height: 100%;
+			    left: 0px;
+			    background: #7a55a3;
+			    -moz-transition: all 0.3s ease-in-out;
+			    -o-transition: all 0.3s ease-in-out;
+			    -webkit-transition: all 0.3s ease-in-out;
+			    transition: all 0.3s ease-in-out;
+			}*/
 
 			.nav-links-flex-item:hover {
-
+				background: #0099cc;
 			}
 			/*.nav-links-flex-item a {
 				color: #eee;
@@ -148,33 +173,74 @@
 			.nav-links-flex-item a:hover {
 				color: white;
 			}
+
+			.commonHeader {
+				border-bottom: solid 1px #eee;
+    			padding-bottom: 5px;
+			}
+
+			.commonGlyphicon {
+				padding: 15px;
+			    margin: 5px;
+			    font-size: 20px;
+			    border: solid 1px #0099cc;
+			    border-radius: 50%;
+			    color: #0099cc;
+			}
+
+			.commonGlyphicon:hover {
+				color: #fff;
+				background: #0099cc;
+			}
+
+			/*Generic css*/
+			.paddingZero {
+				padding: 0;
+			}
+			.marginTop {
+				margin-top: 10px;
+			}
 		</style>
-	<script>
-		// to be moved to another file
-		var currentRightContainer;
-		$(document).ready(function () {
-			setTimeout(function(){ 
-				$('.loaderContainer').hide();
-				$('.mainOuterContainer').show();
-			}, 1000);
-			setTimeout(function(){ 
-				currentRightContainer = "rightDataContainerHome";
-				$("#rightDataContainerHome").toggle("slide", 500)
-			}, 100);
-		})
-		function updateRightDataContainer(toUpdateDiv) {
-			if(toUpdateDiv == currentRightContainer) {
-				return;
-			}
-			else {
-				$(".rightDataContainer").hide('slide', 300);
+		<script>
+			// to be moved to another file
+			var currentRightContainer;
+			$(document).ready(function () {
 				setTimeout(function(){ 
-					currentRightContainer = toUpdateDiv;
-					$("#"+toUpdateDiv).toggle("slide", 500)
-				}, 300);
+					$('.loaderContainer').hide();
+					$('.mainOuterContainer').show();
+				}, 1000);
+				setTimeout(function(){ 
+					currentRightContainer = "rightDataContainerHome";
+					$("#rightDataContainerHome").toggle("slide", 500)
+				}, 100);
+			})
+			function updateRightDataContainer(toUpdateDiv) {
+				if(toUpdateDiv == currentRightContainer) {
+					return;
+				}
+				else {
+					$(".rightDataContainer").hide('drop', 400);
+					setTimeout(function(){ 
+						currentRightContainer = toUpdateDiv;
+						$("#"+toUpdateDiv).toggle("slide", 300)
+						if(toUpdateDiv == "rightDataContainerContact") {
+							initialize();
+						}
+					}, 400);
+				}
 			}
-		}
-	</script>
+
+			// to render map
+			function initialize() {
+			  var mapProp = {
+			    center:new google.maps.LatLng(51.508742,-0.120850),
+			    zoom:5,
+			    mapTypeId:google.maps.MapTypeId.ROADMAP
+			  };
+			  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+			}
+			// google.maps.event.addDomListener(window, 'load', initialize);
+		</script>
 
 	</head>
 	<body>
@@ -222,7 +288,7 @@
 
 			</div>
 			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerHome">
-				<h2>Home</h2>
+				<h2 class = "commonHeader">Home</h2>
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -235,7 +301,7 @@
 			</div>
 
 			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerResume">
-				<h2>Resume</h2>
+				<h2 class = "commonHeader">Resume</h2>
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -243,7 +309,7 @@
 			</div>
 
 			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerPortfolio">
-				<h2>Portfolio</h2>
+				<h2 class = "commonHeader">Portfolio</h2>
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
 
@@ -251,11 +317,33 @@
 			</div>
 
 			<div class = "col-md-8 rightDataContainer" id = "rightDataContainerContact">
-				<h2>Contact</h2>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				<h2 class = "commonHeader">Contact</h2>
 
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				<div id = "googleMap" style = "width:100%;height:380px;"></div>
+
+				<div class = "row marginTop">
+					<div class = "col-md-4 paddingZero">
+						<a href = "mailto:srikanthbarenkala@gmail.com"><span class="glyphicon glyphicon-envelope commonGlyphicon">
+						</span></a>
+						<span>
+							sree2chin@gmail.com
+						</span>
+					</div>
+					<div class = "col-md-4 paddingZero">
+						<span class="glyphicon glyphicon-phone commonGlyphicon">
+						</span>
+						<span>
+							+91-9986906066
+						</span>
+					</div>
+					<div class = "col-md-4 paddingZero">
+						<span class="glyphicon glyphicon-map-marker commonGlyphicon">
+						</span>
+						<span>
+							Bangalore
+						</span>
+					</div>
+				</div>
 			</div>
 		</div>
 
