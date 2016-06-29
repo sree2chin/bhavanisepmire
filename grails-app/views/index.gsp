@@ -138,6 +138,7 @@
 			    text-align: center;
 			    padding-right: 0px;
 			    /* background: #0099A0; */
+			    color: #0099cc;
 			    border-bottom: solid 1px #eee;
 			    cursor: pointer;
 			    padding-top: 10px;
@@ -181,6 +182,7 @@
 				color: #0099cc;
 				border-bottom: solid 1px #eee;
     			padding-bottom: 5px;
+    			font-size: 19px;
 			}
 
 			.commonGlyphicon {
@@ -277,9 +279,33 @@
 			    font-size: 17px;
 			}
 
+			.homePageContentInfo {
+			    background: #F1F1FA;
+			    min-height: 100%;
+			    margin-top: 15px;
+			    border-left: solid 3px #0099cc;
+			    padding: 10px;
+			}
+
+			.homePageContentRow {
+				padding-top: 10px;
+			}
+
+			.homePageSideHeading {
+				color: #8c8c8c;
+				font-weight: bold;
+				padding: 0;
+			}
+
+			.homePageValue {
+				color: #8c8c8c;
+			}
+
+			.homePageContent 
+
 			/*Generic css*/
 			.paddingZero {
-				padding: 0;
+				padding: 0 !important;
 			}
 			.marginTop {
 				margin-top: 10px;
@@ -409,6 +435,62 @@
 						</div>
 						<div class = "col-md-4">
 							Creative
+						</div>
+					</div>
+				</div>
+				<div class = "row homePageContentInfo">
+					<div class = "row">
+						<div class = "col-md-6">
+							<div class = "row homePageContentRow">
+								<div class = "col-md-3 homePageSideHeading">
+									E-mail:
+								</div>
+								<div class = "col-md-9 homePageValue">
+									srikanthbarenkala@gmail.com
+								</div>
+							</div>
+							<div class = "row homePageContentRow ">
+								<div class = "col-md-3 homePageSideHeading">
+									Phone:
+								</div>
+								<div class = "col-md-9 homePageValue">
+									+91-9986906066
+								</div>
+							</div>
+							<div class = "row homePageContentRow">
+								<div class = "col-md-3 homePageSideHeading">
+									Date of birth:
+								</div>
+								<div class = "col-md-9 homePageValue">
+									03 June 1992
+								</div>
+							</div>
+						</div>
+						<div class = "col-md-6">
+							<div class = "row homePageContentRow">
+								<div class = "col-md-3 homePageSideHeading">
+									Address: 
+								</div>
+								<div class = "col-md-9 homePageValue">
+									Bangalore
+								</div>
+							</div>
+							<div class = "row homePageContentRow">
+								<div class = "col-md-3 homePageSideHeading">
+									Website: 
+								</div>
+								<div class = "col-md-9 homePageValue">
+									www.srikanthkumar.com
+								</div>
+							</div>
+							<div class = "row homePageContentRow">
+								<div class = "col-md-3 homePageSideHeading">
+									Languages: 
+								</div>
+								<div class = "col-md-9 homePageValue">
+									Telugu, Hindi, English
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
