@@ -17,8 +17,8 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 		<!-- To include google maps -->
-		<script src="http://maps.googleapis.com/maps/api/js">
-		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDREKml4Sir6Nsd_CAhylqstiXmZJ3MowI&callback = initMap"
+    		async defer></script>
 		</style>
 
 		<style>
