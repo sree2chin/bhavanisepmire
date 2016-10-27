@@ -26,6 +26,8 @@
 			body {
 				background: #efefef;
 				color: #404040;
+				-webkit-font-smoothing: antialiased;
+				-moz-osx-font-smoothing: grayscale;
 			}
 			.row {
 				margin: 0px;
@@ -143,11 +145,11 @@
 			    cursor: pointer;
 			    padding-top: 10px;
 			    padding-bottom: 10px;
-			    -webkit-transition: all 0.4s ease-in-out;
-				-moz-transition: all 0.4s ease-in-out;
-				-o-transition: all 0.4s ease-in-out;
-				-ms-transition: all 0.4s ease-in-out;
-				transition: all 0.4s ease-in-out;
+			    -webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				-ms-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
 			}
 			/*.nav-links-flex-item:before {
 			    content: '';
@@ -192,22 +194,22 @@
 			    border: solid 1px #eee;
 			    border-radius: 50%;
 			    color: #0099cc;
-			    -webkit-transition: all 0.4s ease-in-out;
-				-moz-transition: all 0.4s ease-in-out;
-				-o-transition: all 0.4s ease-in-out;
-				-ms-transition: all 0.4s ease-in-out;
-				transition: all 0.4s ease-in-out;
+			    -webkit-transition: all 0.2s ease-in-out;
+				-moz-transition: all 0.2s ease-in-out;
+				-o-transition: all 0.2s ease-in-out;
+				-ms-transition: all 0.2s ease-in-out;
+				transition: all 0.2s ease-in-out;
 			}
 
 			.commonGlyphicon:hover {
 				color: #fff;
 				background: #0099cc;
 				border: solid 1px #0099cc;
-				-webkit-transition: all 0.4s ease-in-out;
-			    -moz-transition: all 0.4s ease-in-out;
-			    -o-transition: all 0.4s ease-in-out;
-			    -ms-transition: all 0.4s ease-in-out;
-			    transition: all 0.4s ease-in-out;
+				-webkit-transition: all 0.2s ease-in-out;
+			    -moz-transition: all 0.2s ease-in-out;
+			    -o-transition: all 0.2s ease-in-out;
+			    -ms-transition: all 0.2s ease-in-out;
+			    transition: all 0.2s ease-in-out;
 			}
 
 			.headingFooter {
@@ -216,7 +218,8 @@
 			    font-style: italic;
 			    margin-top: 4px;
 			    font-weight: 600;
-			    color: #a3c2c2;
+			    color: #8c8c8c;
+			    margin-bottom: 2px;
 			}
 
 			.emailTemplateContainer {
@@ -409,6 +412,10 @@
 				  	<!-- <a href = "#">Resume</a> -->
 				  	Resume
 				  </div>
+				  <div class="nav-links-flex-item" onclick = updateRightDataContainer("rightDataContainerWritings")>
+				  	<!-- <a href = "#">Portfolio</a> -->
+				  	Writings
+				  </div>
 				  <div class="nav-links-flex-item" onclick = updateRightDataContainer("rightDataContainerPortfolio")>
 				  	<!-- <a href = "#">Portfolio</a> -->
 				  	Portfolio
@@ -530,18 +537,61 @@
 
 			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerResume">
 				<h2 class = "commonHeader">Resume</h2>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				Updating...
+			</div>
 
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerWritings">
+				<h2 class = "commonHeader">Write</h2>
+
+				<p class = "headingFooter">Extremes</p>
+				<p>&nbsp;
+					Unrequited love, loving hate, serious vanity, misshapen chaos, perpetual bliss, undisguised frustration, excruciating pain, chronic desolation.
+				</p>
+				<br>
+
+				<p>&nbsp;
+					Our desires, preferences etc are impacted  by our culture, our parents, our experience in life, friends, relatives, time, location and what not and they have become biased. We never knew what we truly want. If we were in 18th century, we would be in the anticipation of having a telephone and it would have given us a lot of happiness and now we will not even satisfy with one iphone. Starting a startup may be our goal now, In those days may be they just want peaceful life with whatever job or business they do. If we were raised in poor family, our preferences will be quite different when compared to wealthy people. 
+				</p>
+     			<p>&nbsp;
+     				Over the time we changed a lot, our experience impacted a lot on us. However few aspects like our passion towards love, arts, beauty etc didn’t change, they are there from inception and still persist. They are innate, our basic natural instincts and are quintessential for life.
+				</p>
+
+				<p>&nbsp;
+					Working hard is far more better than the feeling of regret. 
+				</p>
+
+				<p>&nbsp;
+					Whenever I read my diary of the past, I just realise that I was so stupid and immatured at that time, maybe I will feel the same after some days. This is the reason why we should respect elders.
+				</p>
+				<p>&nbsp;
+					May be it's time to change, patriotism is good to some extent, however at first people should realise that every one is human being, then only there will be less bifurcations, wars, discriminations and can achieve peace.
+				</p>
+
+				<p class = "headingFooter">Extension to paulo coelho's words</p>
+				<p>&nbsp;
+					Warrior of light thinks that it will never happen again in his life, but it will happen with more intensity, yet he moves on. Sometimes that fragrance, those memories haunt him, yet he moves on. He thinks that he can control, but he will be devasted again, yet he moves on. He thinks that this will be the end of it, but deep down in his heart he knows that this is just a part of it. He thinks that it's not worth of what he is doing with his life, for he don't even wake up in the morning with enthusiasm, yet he finds a way and moves on.
+				</p>
+
+				<br>
+				<p class = "headingFooter">Others</p>
+				<p>&nbsp;
+					If you are not willing to sound stupid, you don't deserve to be in love.
+				</p>
+
+				<p>&nbsp;
+					The epitaph of the person who works too hard too often is "Got everything done; died anyway.
+				</p>
+
+				<p>&nbsp;
+					We don't read and write poetry because it's cute. We read and write poetry because we are members of the human race. And the human race is filled with passion. And medicine, law, business, engineering, these are noble pursuits and necessary to sustain life. But poetry, beauty, love, these are what we stay alive for _Dead poets society
+				</p>
+
+				
 			</div>
 
 			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerPortfolio">
 				<h2 class = "commonHeader">Portfolio</h2>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				Updating...
 			</div>
 
 			<div class = "col-md-8 col-sm-8 rightDataContainer" id = "rightDataContainerContact">
