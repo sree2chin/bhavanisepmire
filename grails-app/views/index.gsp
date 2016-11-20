@@ -7,8 +7,43 @@
 <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
+  body {font-family: "Lato", sans-serif}
+  .mySlides {display: none}
+
+  .bn-top-heading{
+    position: absolute;
+    left: calc(50% - 150px);
+    width: 300px;
+    top: 13px;
+    font-size: 13px;
+    color: #dee0f3;
+    text-align: center;
+  }   
+  @media only screen and (max-width: 720px) {
+    .bn-top-heading {
+        display: none;
+    }
+  }
+  @media only screen and (min-width: 720px) {
+    .bn-top-heading {
+        display: inline;
+    }
+  }
+
+
+/*  .w3-third img:hover {
+      width: 92% !important;
+      cursor: pointer;
+      -webkit-transition: all 0.2s cubic-bezier(.15,.69,.83,.67);
+      -moz-transition: all $fm-time cubic-bezier(.15,.69,.83,.67);
+      -ms-transition: all $fm-time cubic-bezier(.15,.69,.83,.67);
+      -o-transition: all $fm-time cubic-bezier(.15,.69,.83,.67);
+      transition: all $fm-time cubic-bezier(.15,.69,.83,.67);
+  }
+*/
+
+
+
 </style>
 <body>
 
@@ -20,8 +55,9 @@ body {font-family: "Lato", sans-serif}
   </li>
   <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">Bhavani's Empire</a></li>
   <li class="w3-hide-small"><a href="#band" class="w3-padding-large">Products</a></li>
-  <li class="w3-hide-small"><a href="#tour" class="w3-padding-large">About us</a></li>
-  <li class="w3-hide-small"><a href="#contact" class="w3-padding-large">Contact</a></li>
+  <span class = "bn-top-heading">Live in comfort with our furniture </span>
+  <li class="w3-hide-small" style = "float: right"><a href="#tour" class="w3-padding-large">About us</a></li>
+  <li class="w3-hide-small" style = "float: right"><a href="#contact" class="w3-padding-large">Contact</a></li>
 
 </ul>
 </div>
@@ -39,73 +75,73 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" style="width:100%">
+  <!--<div class="mySlides w3-display-container w3-center">
+    <img src = "http://i66.tinypic.com/1e8bw7.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>Los Angeles</h3>
       <p><b>We had the best time playing at Venice Beach!</b></p>
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src = "${resource(dir: 'images', file: 'bn-furn-2.jpg')}" style="width:100%">
+    <img src = "http://i68.tinypic.com/717fc2.jpg" style="width:100%">
     <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
       <h3>New York</h3>
       <p><b>The atmosphere in New York is lorem ipsum.</b></p>
     </div>
-  </div>
+  </div>-->
   <div class="mySlides w3-display-container w3-center">
-    <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" style="width:100%">
-    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
-      <h3>Chicago</h3>
-      <p><b>Thank you, Chicago - A night we won't forget.</b></p>
-    </div>
+    <img src = "${resource(dir: 'images', file: 'bn-furn-12_1.jpg')}" style="width:100%">
+    <!--<div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>Nandyal</h3>
+      <p><b>Thank you, Live in comfort with our furniture</b></p>
+    </div>-->
   </div>
 
   <!-- The Band Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1185px" id="band">
     <h2 class="w3-wide">Products</h2>
     <p class="w3-opacity"><i></i></p>
-    <p style = "text-align: center">We provide sturdy furniture and the total price of products depends on the weight and the quantity of products you buy.</p>
+    <p style = "text-align: center">We provide sturdy furniture and the total price depends on the weight and the quantity of products you buy.</p>
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
         <p>Cot</p>
         <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+        <p>Single bed</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-10.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
         <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
+        <img src = "${resource(dir: 'images', file: 'bn-furn-11.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
       </div>
     </div>
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
-        <p>Cot</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+        <p>Windows</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-6.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+        <p>Steps</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-7.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
+        <p>Sofas</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-8.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
       </div>
     </div>
     <div class="w3-row w3-padding-32">
       <div class="w3-third">
-        <p>Cot</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+        <p>Design</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-9.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
+        <p>Gates</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-3.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
-        <img src = "${resource(dir: 'images', file: 'bn-furn-1.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
+        <p>Multi-purpose</p>
+        <img src = "${resource(dir: 'images', file: 'bn-furn-4.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
       </div>
     </div>
   </div>
@@ -114,7 +150,7 @@ body {font-family: "Lato", sans-serif}
   <div class="w3-black" id="tour">
     <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
       <h3>About us</h3>
-      We provide customised iron furniture to you with custom dimensions, colors, design, etc. Give us a picture we will deliver the product of it.
+      We provide customised iron furniture to you with custom dimensions, colors, design, etc. Give us a picture, we will deliver the product.
       Our shipping location includes but not limited to Andhra Pradesh state, Hyderabad and Bangalore cities.
       We undertake bulk orders.
     </div>
@@ -141,9 +177,10 @@ body {font-family: "Lato", sans-serif}
   </div>
 
   <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+  <div class="w3-container w3-content w3-padding-64" 
+       style="max-width:800px" 
+       id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
-    <p class="w3-opacity w3-center"><i>Fan? Drop a note!</i></p>
     <div class="w3-row w3-padding-32">
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> Nandyal, Andhra Pradesh<br>
@@ -151,7 +188,7 @@ body {font-family: "Lato", sans-serif}
         <i class="fa fa-envelope" style="width:30px"> </i> Email: bhavanisempire@gmail.com<br>
       </div>
       <div class="w3-col m6">
-        <form action="form.asp" target="_blank">
+        <form action="mailto:bhavanisempire@gmail.com" method="post" enctype="text/plain">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
             <div class="w3-half">
               <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
@@ -172,7 +209,7 @@ body {font-family: "Lato", sans-serif}
 
 <!-- Add Google Maps -->
 <div id="googleMap" style="height:400px;filter:grayscale(90%);-webkit-filter:grayscale(90%);"></div>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEPep3lLlzXOkxMcE1xfwk-D-AUTkwkjo" type="text/javascript"></script>
 <script>
 var myCenter = new google.maps.LatLng(15.4786, 78.4831);
     
