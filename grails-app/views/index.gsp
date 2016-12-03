@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Bhavani's Empire</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
 <link rel="stylesheet" href="${resource(dir: 'css', file: 'main.css')}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 <style>
@@ -112,7 +110,7 @@
         <img src = "${resource(dir: 'images', file: 'bn-furn-10.jpg')}" class="w3-round w3-margin-bottom" alt="Random Name" style="width:90%">
       </div>
       <div class="w3-third">
-        <p>Name</p>
+        <p>Different</p>
         <img src = "${resource(dir: 'images', file: 'bn-furn-11.jpg')}" class="w3-round" alt="Random Name" style="width:90%">
       </div>
     </div>
@@ -185,6 +183,7 @@
       <div class="w3-col m6 w3-large w3-margin-bottom">
         <i class="fa fa-map-marker" style="width:30px"></i> Nandyal, Andhra Pradesh<br>
         <i class="fa fa-phone" style="width:30px"></i> Phone: +91 9986906066<br>
+        <div>&nbsp; &nbsp; &nbsp; &nbsp;+91 9346540668</div>
         <i class="fa fa-envelope" style="width:30px"> </i> Email: bhavanisempire@gmail.com<br>
       </div>
       <div class="w3-col m6">
